@@ -1,18 +1,4 @@
 {
-    "osztalyok": [
-      {
-        "id": 1,
-        "nev": "13.C",
-        "szak": "Szoftverfejlesztő és tesztelő",
-        "evfolyam": 13
-      },
-      {
-        "id": 2,
-        "nev": "12.B",
-        "szak": "Informatikai rendszer- és alkalmazásüzemeltető technikus",
-        "evfolyam": 12
-      }
-    ],
     "diakok": [
       {
         "id": 1,
