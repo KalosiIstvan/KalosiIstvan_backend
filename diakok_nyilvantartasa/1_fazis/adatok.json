@@ -1,54 +1,5 @@
+
 {
-    "osztalyok": [
-      {
-        "id": 1,
-        "nev": "13.C",
-        "szak": "Szoftverfejlesztő és tesztelő",
-        "evfolyam": 13
-      },
-      {
-        "id": 2,
-        "nev": "12.B",
-        "szak": "Informatikai rendszer- és alkalmazásüzemeltető technikus",
-        "evfolyam": 12
-      }
-    ],
-    "diakok": [
-      {
-        "id": 1,
-        "nev": "Nagy Péter",
-        "email": "nagy.peter@example.com",
-        "osztaly_id": 1
-      },
-      {
-        "id": 2,
-        "nev": "Kovács Anna",
-        "email": "kovacs.anna@example.com",
-        "osztaly_id": 1
-      },
-      {
-        "id": 3,
-        "nev": "Tóth Márk",
-        "email": "toth.mark@example.com",
-        "osztaly_id": 1
-      },
-      {
-        "id": 4,
-        "nev": "Szabó Bence",
-        "email": "szabo.bence@example.com",
-        "osztaly_id": 2
-      },
-      {
-        "id": 5,
-        "nev": "Kiss Dóra",
-        "email": "kiss.dora@example.com",
-        "osztaly_id": 2
-      },
-      {
-        "id": 6,
-        "nev": "Varga Lili",
-        "email": "varga.lili@example.com",
-        "osztaly_id": 2
-      }
-    ]
-  }
+  "osztalyok": [],
+  "diakok": []
+}
