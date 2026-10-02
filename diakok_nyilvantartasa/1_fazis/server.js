@@ -13,15 +13,8 @@ const pool = mysql.createPool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    waitForConnections: true,
-    connectionLimit: 10
+
 });
-
-// az id pozitív egész szám-e
-function ervenyesId(ertek) {
-    return /^[1-9]\d*$/.test(ertek);
-}
-
 
 
 app.get("/", (req, res) => {
@@ -38,7 +31,6 @@ app.get("/", (req, res) => {
     });
 });
 
-//  1. Összes osztály lekérdezése 
 
 app.get("/api/osztalyok", async (req, res) => {
     try {
@@ -52,7 +44,6 @@ app.get("/api/osztalyok", async (req, res) => {
     }
 });
 
-// 2. Egy osztály lekérdezése 
 
 app.get("/api/osztalyok/:id", async (req, res) => {
     try {
@@ -76,7 +67,6 @@ app.get("/api/osztalyok/:id", async (req, res) => {
     }
 });
 
-//  3. Egy osztály diákjai 
 
 app.get("/api/osztalyok/:id/diakok", async (req, res) => {
     try {
@@ -107,8 +97,6 @@ app.get("/api/osztalyok/:id/diakok", async (req, res) => {
     }
 });
 
-// 4. Összes diák (INNER JOIN), szűrés: ?aktiv=1 
-
 app.get("/api/diakok", async (req, res) => {
     try {
         let sql = `
@@ -138,8 +126,6 @@ app.get("/api/diakok", async (req, res) => {
     }
 });
 
-//  5. Egy diák lekérdezése 
-
 app.get("/api/diakok/:id", async (req, res) => {
     try {
         if (!ervenyesId(req.params.id)) {
@@ -166,14 +152,10 @@ app.get("/api/diakok/:id", async (req, res) => {
     }
 });
 
-//10. Hibakezelés
-
-// ismeretlen útvonal
 app.use((req, res) => {
     res.status(404).json({ error: "Az útvonal nem található" });
 });
 
-// minden más hiba, a szerver nem omlik össze
 app.use((err, req, res, next) => {
     console.error(err);
     res.status(500).json({ error: "Szerverhiba" });
