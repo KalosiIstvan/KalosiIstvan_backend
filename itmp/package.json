@@ -1,0 +1,20 @@
+{
+  "name": "itmp",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "env": "^0.0.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5",
+    "node": "^22.23.3",
+    "nodemon": "^1.14.10"
+  }
+}
